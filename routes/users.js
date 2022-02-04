@@ -57,4 +57,25 @@ router.get('/', function(req, res, next) {
     res.status(404).send('¡Lo siento, el ítem no se ha encontrado!');
     });
     
+    //Post de un nuevo usuario
+    router.post('/', function(req, res) {
+      var new_user = req.body;
+      //ToDo (hacer algo con el nuevo usuario)
+      res.status(200).send('Usuario ' + req.body.name + ' ha sido añadido satisfactoriamente');
+      });
+      
+    // PUT de un usuario por su Id
+    router.put('/:id', function(req, res) {
+      var updated_user = req.body;
+      //ToDo (hacer algo con el usuario)
+      res.status(200).send('Usuario con id ' + req.params.id + ' ha sido actualizado satisfactoriamente');
+      });
+
+    // DELETE de un usuario por su Id
+    router.delete('/:id', function(req, res) {
+      res.status(200).send('Usuario con id ' + req.params.id + ' ha sido borrado satisfactoriamente');
+      //ToDo (hacer algo con el usuario)
+      });
+  
+  
 module.exports = router;
