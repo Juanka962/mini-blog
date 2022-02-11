@@ -1,0 +1,12 @@
+POST http://localhost:5000/users
+Content-Type: application/json 
+
+{
+"id": 789,
+"name": "Tomás Gomez",
+"phones": {
+"home": "999 555 111",
+"mobile": "666 888 222"
+},
+"registered": true
+}

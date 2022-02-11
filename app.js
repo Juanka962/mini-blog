@@ -42,3 +42,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://admin:admin@cluster0.bx7h3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', 
+{ useNewUrlParser:true })
+  .then(() => console.log('connection successful'))
+  .catch((err) => console.error(err));
