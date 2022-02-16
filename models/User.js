@@ -5,13 +5,14 @@ var Post = require('../models/Post.js');
 var bcrypt = require('bcryptjs');
 var SALT_WORK_FACTOR = 10;
 var UserSchema = new Schema({
+    name:{type: String, required: true},
     username: { type: String, required: true, index: { unique: true }
 },
     password: { type: String, required: true },
     fullname: String,
     email: { type: String, required: true },
     creationdate: { type: Date, default: Date.now },
-    ole: {
+    role: {
         type: String,
         enum: ['admin', 'subscriber'],
         default: 'subscriber '
